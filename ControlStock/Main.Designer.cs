@@ -44,13 +44,12 @@ namespace ControlStock
             this.verCajaActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCajasAnterioresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rutaDeInstalaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verIPDelServidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionStringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rutaDeInstalaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mediosDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasCorrientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pathImgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirAppSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,11 +61,7 @@ namespace ControlStock
             this.ventasToolStripMenuItem,
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
-            this.configuraciónToolStripMenuItem,
-            this.clientesToolStripMenuItem,
-            this.proveedoresToolStripMenuItem,
-            this.cuentasCorrientesToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
+            this.configuraciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1110, 28);
@@ -128,9 +123,10 @@ namespace ControlStock
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.Enabled = false;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(92, 24);
-            this.toolStripMenuItem1.Text = "Compras";
+            this.toolStripMenuItem1.Text = "Preventa";
             // 
             // toolStripMenuItem2
             // 
@@ -141,7 +137,7 @@ namespace ControlStock
             this.verCajasAnterioresToolStripMenuItem});
             this.toolStripMenuItem2.Enabled = false;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(122, 24);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(57, 24);
             this.toolStripMenuItem2.Text = "Caja";
             // 
             // verCajasToolStripMenuItem
@@ -172,59 +168,60 @@ namespace ControlStock
             // 
             // configuraciónToolStripMenuItem
             // 
+            this.configuraciónToolStripMenuItem.BackgroundImage = global::ControlStock.Properties.Resources.logo;
             this.configuraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rutaDeInstalaciónToolStripMenuItem,
+            this.verIPDelServidorToolStripMenuItem,
             this.connectionStringToolStripMenuItem,
-            this.mediosDePagoToolStripMenuItem});
+            this.rutaDeInstalaciónToolStripMenuItem,
+            this.mediosDePagoToolStripMenuItem,
+            this.pathImgToolStripMenuItem,
+            this.abrirAppSettingsToolStripMenuItem});
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
             this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
+            // 
+            // verIPDelServidorToolStripMenuItem
+            // 
+            this.verIPDelServidorToolStripMenuItem.Name = "verIPDelServidorToolStripMenuItem";
+            this.verIPDelServidorToolStripMenuItem.Size = new System.Drawing.Size(390, 24);
+            this.verIPDelServidorToolStripMenuItem.Text = "Ver IP del Servidor";
+            this.verIPDelServidorToolStripMenuItem.Click += new System.EventHandler(this.verIPDelServidorToolStripMenuItem_Click);
+            // 
+            // connectionStringToolStripMenuItem
+            // 
+            this.connectionStringToolStripMenuItem.Name = "connectionStringToolStripMenuItem";
+            this.connectionStringToolStripMenuItem.Size = new System.Drawing.Size(390, 24);
+            this.connectionStringToolStripMenuItem.Text = "Base de Datos";
+            this.connectionStringToolStripMenuItem.Click += new System.EventHandler(this.connectionStringToolStripMenuItem_Click);
             // 
             // rutaDeInstalaciónToolStripMenuItem
             // 
             this.rutaDeInstalaciónToolStripMenuItem.Enabled = false;
             this.rutaDeInstalaciónToolStripMenuItem.Name = "rutaDeInstalaciónToolStripMenuItem";
-            this.rutaDeInstalaciónToolStripMenuItem.Size = new System.Drawing.Size(217, 24);
+            this.rutaDeInstalaciónToolStripMenuItem.Size = new System.Drawing.Size(390, 24);
             this.rutaDeInstalaciónToolStripMenuItem.Text = "ConnectionString";
-            // 
-            // connectionStringToolStripMenuItem
-            // 
-            this.connectionStringToolStripMenuItem.Name = "connectionStringToolStripMenuItem";
-            this.connectionStringToolStripMenuItem.Size = new System.Drawing.Size(217, 24);
-            this.connectionStringToolStripMenuItem.Text = "Base de Datos";
-            this.connectionStringToolStripMenuItem.Click += new System.EventHandler(this.connectionStringToolStripMenuItem_Click);
             // 
             // mediosDePagoToolStripMenuItem
             // 
             this.mediosDePagoToolStripMenuItem.Enabled = false;
             this.mediosDePagoToolStripMenuItem.Name = "mediosDePagoToolStripMenuItem";
-            this.mediosDePagoToolStripMenuItem.Size = new System.Drawing.Size(217, 24);
+            this.mediosDePagoToolStripMenuItem.Size = new System.Drawing.Size(390, 24);
             this.mediosDePagoToolStripMenuItem.Text = "Medios de Pago";
             this.mediosDePagoToolStripMenuItem.Click += new System.EventHandler(this.mediosDePagoToolStripMenuItem_Click);
             // 
-            // clientesToolStripMenuItem
+            // pathImgToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.pathImgToolStripMenuItem.Name = "pathImgToolStripMenuItem";
+            this.pathImgToolStripMenuItem.Size = new System.Drawing.Size(390, 24);
+            this.pathImgToolStripMenuItem.Text = "Path Img (Seleccionar archivo logo.ico)";
             // 
-            // proveedoresToolStripMenuItem
+            // abrirAppSettingsToolStripMenuItem
             // 
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
-            this.proveedoresToolStripMenuItem.Text = "Proveedores";
-            // 
-            // cuentasCorrientesToolStripMenuItem
-            // 
-            this.cuentasCorrientesToolStripMenuItem.Name = "cuentasCorrientesToolStripMenuItem";
-            this.cuentasCorrientesToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
-            this.cuentasCorrientesToolStripMenuItem.Text = "Cuentas Corrientes";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.abrirAppSettingsToolStripMenuItem.Enabled = false;
+            this.abrirAppSettingsToolStripMenuItem.Name = "abrirAppSettingsToolStripMenuItem";
+            this.abrirAppSettingsToolStripMenuItem.Size = new System.Drawing.Size(390, 24);
+            this.abrirAppSettingsToolStripMenuItem.Text = "Abrir AppSettings";
+            this.abrirAppSettingsToolStripMenuItem.Click += new System.EventHandler(this.abrirAppSettingsToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -261,10 +258,6 @@ namespace ControlStock
         private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rutaDeInstalaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectionStringToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cuentasCorrientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mediosDePagoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
@@ -272,6 +265,9 @@ namespace ControlStock
         private System.Windows.Forms.ToolStripMenuItem cerrarCajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verCajaActualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verCajasAnterioresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verIPDelServidorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pathImgToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abrirAppSettingsToolStripMenuItem;
     }
 }
 

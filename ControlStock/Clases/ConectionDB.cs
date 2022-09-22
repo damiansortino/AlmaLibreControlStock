@@ -136,7 +136,7 @@ namespace ControlStock.Clases
 
 
                     //AjusteCaja();
-                    
+
 
                 }
                 catch (Exception ex)

@@ -52,3 +52,4 @@ D:\GIT\AlmaLibreControlStock\ControlStock\obj\Debug\ControlStock.csproj.Generate
 D:\GIT\AlmaLibreControlStock\ControlStock\obj\Debug\ControlStock.csproj.CoreCompileInputs.cache
 D:\GIT\AlmaLibreControlStock\ControlStock\obj\Debug\ControlStock.exe
 D:\GIT\AlmaLibreControlStock\ControlStock\obj\Debug\ControlStock.pdb
+D:\GIT\AlmaLibreControlStock\ControlStock\obj\Debug\ControlStock.popup_Path_Img.resources

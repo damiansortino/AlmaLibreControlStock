@@ -265,7 +265,7 @@ namespace ControlStock
 
 
             double subtotgral = 0;
-            foreach (DataGridViewRow item in dgvProductosVenta.Rows )
+            foreach (DataGridViewRow item in dgvProductosVenta.Rows)
             {
                 subtotgral = subtotgral + (double.Parse(item.Cells[1].Value.ToString()) * double.Parse(item.Cells[3].Value.ToString()));
             }
@@ -708,8 +708,8 @@ namespace ControlStock
 
             //quita el producto de la lista para enviar a base de datos
 
-            List<DetalleFactura> filtrado = detallesDB.FindAll(x=>x.CadenaBusquedaProducto.Contains((string)dgvProductosVenta.CurrentRow.Cells[0].Value));
-            detallesDB = detallesDB.FindAll(x=>x.ProductoId != filtrado[0].ProductoId);
+            List<DetalleFactura> filtrado = detallesDB.FindAll(x => x.CadenaBusquedaProducto.Contains((string)dgvProductosVenta.CurrentRow.Cells[0].Value));
+            detallesDB = detallesDB.FindAll(x => x.ProductoId != filtrado[0].ProductoId);
 
             dgvProductosVenta.DataSource = null;
             dgvProductosVenta.DataSource = productosagregados;

@@ -78,6 +78,7 @@ namespace ControlStock
                 dgvMuestraVentas.Columns[17].HeaderText = "Vendedora";
                 dgvMuestraVentas.Columns[4].HeaderText = "Fecha";
 
+                dgvMuestraVentas.Rows[0].Selected = true;
             }
         }
 
@@ -123,13 +124,34 @@ namespace ControlStock
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            //nuevo formulario para ver detalle de la venta
-            Comprobante seleccionado = (Comprobante)dgvMuestraVentas.CurrentRow.DataBoundItem;
+            try
+            {
+                if (dgvMuestraVentas.Rows.Count != 0)
+                {
+                    //nuevo formulario para ver detalle de la venta
 
-            DetalleVenta detalledelaventa = new DetalleVenta(seleccionado);
-            detalledelaventa.MdiParent = ParentForm;
 
-            detalledelaventa.Show();
+                Comprobante seleccionado = (Comprobante)dgvMuestraVentas.CurrentRow.DataBoundItem;
+
+                DetalleVenta detalledelaventa = new DetalleVenta(seleccionado);
+                detalledelaventa.MdiParent = ParentForm;
+
+                detalledelaventa.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("No hay seleccionada ninguna venta para mostrar");
+                }
+                
+
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+
 
         }
 

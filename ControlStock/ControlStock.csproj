@@ -51,6 +51,9 @@
     <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -72,6 +75,8 @@
     <Compile Include="AjustarStock.Designer.cs">
       <DependentUpon>AjustarStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApiHelper\Consumer.cs" />
+    <Compile Include="ApiHelper\Reply.cs" />
     <Compile Include="CerrarCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +134,12 @@
     <Compile Include="NuevaVenta.Designer.cs">
       <DependentUpon>NuevaVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="popup_Path_Img.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popup_Path_Img.Designer.cs">
+      <DependentUpon>popup_Path_Img.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PruebaConexion.cs">
@@ -167,6 +178,9 @@
     <EmbeddedResource Include="NuevaVenta.resx">
       <DependentUpon>NuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="popup_Path_Img.resx">
+      <DependentUpon>popup_Path_Img.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -186,6 +200,7 @@
     <EmbeddedResource Include="VerVentas.resx">
       <DependentUpon>VerVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -201,6 +216,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Img\logo.jpeg" />
+    <Content Include="Img\logo.ico" />
+    <Content Include="Img\logo_almalibre.jpg" />
     <Content Include="logo.ico" />
     <Content Include="logo_almalibre.jpg" />
   </ItemGroup>
@@ -216,5 +233,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
