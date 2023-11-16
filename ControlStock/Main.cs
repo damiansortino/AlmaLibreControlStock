@@ -92,13 +92,5 @@ namespace ControlStock
             nuevo.MdiParent = ParentForm;
             nuevo.Show();
         }
-
-        private void abrirAppSettingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog abrirAppSetting = new OpenFileDialog();
-            abrirAppSetting.ShowDialog();
-
-            abrirAppSetting.OpenFile();
-        }
     }
 }
